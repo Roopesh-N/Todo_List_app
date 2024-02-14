@@ -2,9 +2,9 @@ Todo is a user-friendly and intuitive todo list application designed to streamli
 
 planned enhancements:
 
-1.Adding reminders to notify users about their tasks.
-2.Delete account
-3.Email notification upon adding each task to your list.
+Adding reminders to notify users about their tasks.
+Delete account.
+Email notification upon adding each task to your list.
 
 
 Follow this steps:

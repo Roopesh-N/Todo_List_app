@@ -9,8 +9,8 @@ Email notification upon adding each task to your list.
 
 Follow this steps:
 
-Clone this repository into a folder on your computer
-Download Python
+Clone this repository into a folder on your computer.
+Download Python.
 Launch the terminal within the directory containing the code.
 Enter "pip install -r requirements.txt" in the terminal to install all necessary components for running the application.
 Input "python manage.py runserver" to initiate a localhost server for the application.

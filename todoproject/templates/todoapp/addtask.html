@@ -1,0 +1,18 @@
+{% extends 'todoapp/homepage.html' %}
+
+{% block body_block %}
+
+<div class="jumbotron" align="center">
+    <!-- <div class="container"> -->
+    <h1 class="display-4">Add Task</h1>
+    <hr class="my-4">
+    <form method="post">
+        {{form.as_p}}
+        {% csrf_token %}
+        &nbsp;&nbsp;<input type="submit" class="btn btn-success btn-lg" value="Add Task" name="">&nbsp;&nbsp;&nbsp;
+    </form> 
+  <!-- </div> -->
+</div>
+
+
+{% endblock %}

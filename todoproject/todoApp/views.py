@@ -23,7 +23,7 @@ def login_view(request):
                     return HttpResponseRedirect(reverse('homepage', args=[slug]))
             except ObjectDoesNotExist:
                 messages.error(request, "User does not exist.Please try again.")
-    return render(request,'todoApp/login.html',{'form':form})
+    return render(request,'todoapp/login.html',{'form':form})
 
 
 def signup_view(request):
@@ -34,7 +34,7 @@ def signup_view(request):
             form.save()
             messages.success(request,"Account created successfully, Please login")
             return redirect('login')
-    return render(request,'todoApp/signup.html',{'form':form,})
+    return render(request,'todoapp/signup.html',{'form':form,})
 
 
 
@@ -42,7 +42,7 @@ def homepage_view(request,slug):
     obj=userModel.objects.get(slug=slug)
     tasks=task.objects.filter(user=obj).order_by('date')# here obj refering to user object from usermodel 
 
-    return render(request,'todoApp/homepage.html',{'obj':obj,'tasks':tasks})
+    return render(request,'todoapp/homepage.html',{'obj':obj,'tasks':tasks})
 
 def addtask_view(request,slug):
     obj=userModel.objects.get(slug=slug)
@@ -55,7 +55,7 @@ def addtask_view(request,slug):
             date=request.POST['date']
             task.objects.create(user=obj,title=title,description=description,date=date)
             return HttpResponseRedirect(reverse('homepage', args=[slug]))
-    return render(request,'todoApp/addtask.html',{'form':form,'obj':obj})
+    return render(request,'todoapp/addtask.html',{'form':form,'obj':obj})
 
 def updatetask_view(request,slug,title):
     userobj=userModel.objects.get(slug=slug)

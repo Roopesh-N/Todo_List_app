@@ -14,7 +14,7 @@ class SignUpForm(forms.ModelForm):
     reenter_password=forms.CharField(widget=forms.PasswordInput)
     class Meta:
         model=userModel
-        fields='__all__'
+        fields=('firstname','lastname','username','password','phone','email')
 
     def clean(self):
         total_data=super().clean()

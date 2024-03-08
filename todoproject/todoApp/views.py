@@ -9,8 +9,8 @@ from django.core.exceptions import ObjectDoesNotExist
 def login_view(request):
     form=loginForm()
     if request.method=='POST':
-        uname=request.POST['username']#entered username
-        enteredpwd=request.POST['password']#entered password
+        uname=request.POST['username']#entered uname
+        enteredpwd=request.POST['password']#entered pwd
         form=loginForm(request.POST)
         if form.is_valid():
             try:
